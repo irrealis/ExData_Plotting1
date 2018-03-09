@@ -35,7 +35,7 @@ df <- df %>% mutate(datetime = dmy_hms(paste(Date, Time))) %>%
 # - Sub metering.
 # - Voltage.
 # - Global reactive power.
-png("plot4.png")
+png("plot4.png", height = 480, width = 480)
 par(mfcol = c(2,2))
 # Global active power
 with(df, plot(datetime, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))

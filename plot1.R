@@ -31,6 +31,6 @@ df <- df %>% mutate(datetime = dmy_hms(paste(Date, Time))) %>%
   filter(datetime >= ymd("2007-02-01") & datetime < ymd("2007-02-03"))
 
 # Histogram of global active power.
-png("plot1.png")
+png("plot1.png", height = 480, width = 480)
 hist(df$Global_active_power, xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "red")
 dev.off()

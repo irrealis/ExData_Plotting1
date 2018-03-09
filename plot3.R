@@ -31,7 +31,7 @@ df <- df %>% mutate(datetime = dmy_hms(paste(Date, Time))) %>%
   filter(datetime >= ymd("2007-02-01") & datetime < ymd("2007-02-03"))
 
 # Plot of weekday versus sub metering.
-png("plot3.png")
+png("plot3.png", height = 480, width = 480)
 with(df, {
   plot(datetime, Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering", col = "black")
   lines(datetime, Sub_metering_2, col = "red")

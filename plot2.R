@@ -31,6 +31,6 @@ df <- df %>% mutate(datetime = dmy_hms(paste(Date, Time))) %>%
   filter(datetime >= ymd("2007-02-01") & datetime < ymd("2007-02-03"))
 
 # Plot of weekday versus global active power.
-png("plot2.png")
+png("plot2.png", height = 480, width = 480)
 with(df, plot(datetime, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
 dev.off()
