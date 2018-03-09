@@ -5,7 +5,7 @@
 library(dplyr)
 library(lubridate)
 
-# Create data dir and extract raw data if missing.
+# Create data dir and download/extract raw data if missing.
 zip_url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 datadir <- "raw_data"
 zipfile <- file.path(datadir, "household_power_consumption.zip")

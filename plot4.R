@@ -24,7 +24,7 @@ df <- read.table(
   colClasses = c(rep("character", 2), rep("numeric", 7))
 )
 
-# Convert Date/Time columns to datetime column, 
+# Create data dir and download/extract raw data if missing.
 df <- df %>% mutate(datetime = dmy_hms(paste(Date, Time))) %>%
   select(-Date, -Time) %>%
   # Filter data from the dates 2007-02-01 and 2007-02-02.
