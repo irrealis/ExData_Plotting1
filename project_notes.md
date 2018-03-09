@@ -6,7 +6,7 @@ See [README.md](./README.md) for more details.
 
 ## R version and platform used
 
-```{r}
+```r
 print(version)
 ```
 ```
@@ -30,14 +30,14 @@ nickname       Short Summer
 ## Getting the data
 
 Create data dir if missing.
-```{r}
+```r
 if(!file.exists("raw_data")){
   dir.create("raw_data")
 }
 ```
 
 Get raw data if missing.
-```{r}
+```r
 raw_file_path <- file.path("raw_data", "household_power_consumption.zip")
 if(!file.exists(raw_file_path)){
   download.file(
