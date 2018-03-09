@@ -1,0 +1,7 @@
+# Project notes
+
+Notebook for week-1 project, Coursera Course "Exploratory Data Analysis", "Data Science" track, Johns Hopkins University.
+
+See [README.md](./README.md) for more details.
+
+## 
