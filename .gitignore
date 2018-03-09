@@ -1,5 +1,6 @@
-# Cached data files for this project
+# Cached data for this project
 /raw_data/
+household_power_consumption.txt
 
 # Vim files:
 *.sw?
