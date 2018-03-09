@@ -232,8 +232,8 @@ tail(df)
 hist(df$Global_active_power, xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "red")
 ```
 - **Note: initially the resulting histogram doesn't match that of Peng.**
-  - Since the frequencies are about halved, I'm probably missing a month of data.
-  - I notice that my final entry has timestamp "2007-02-02 00:00:00", meaning I have only one of data.
+  - Since the frequencies are about halved, I'm probably missing a day of data.
+  - I notice that my final entry has timestamp "2007-02-02 00:00:00", meaning I have only one day of data.
   - My original datetime filter looked like this:
     ```r
     df <- filter(df, datetime >= ymd("2007-02-01") & datetime <= ymd("2007-02-02"))
