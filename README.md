@@ -1,3 +1,7 @@
+# ds04-wk1-exploratory-data-analysis
+
+Week-1 project for Coursera Course "Exploratory Data Analysis" in the "Data Science" track from Johns Hopkins University.
+
 ## Introduction
 
 This assignment uses data from
