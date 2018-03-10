@@ -15,14 +15,8 @@ if(!file.exists(zipfile)){ download.file(zip_url, zipfile, "curl") }
 if(!file.exists(datafile)){ unzip(zipfile) }
 
 # Load data.
-df <- read.table(
-  datafile,
-  sep = ";",
-  dec = ".",
-  header = T,
-  na.strings = c("?"),
-  colClasses = c(rep("character", 2), rep("numeric", 7))
-)
+col_cls = c(rep("character", 2), rep("numeric", 7))
+df <- read.table(datafile, sep = ";", header = T, na.strings = "?", colClasses = col_cls)
 
 # Convert Date/Time columns to datetime column, 
 df <- df %>% mutate(datetime = dmy_hms(paste(Date, Time))) %>%
