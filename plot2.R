@@ -18,10 +18,13 @@ if(!file.exists(datafile)){ unzip(zipfile) }
 col_cls = c(rep("character", 2), rep("numeric", 7))
 df <- read.table(datafile, sep = ";", header = T, na.strings = "?", colClasses = col_cls)
 
-# Convert Date/Time columns to datetime column, 
-df <- df %>% mutate(datetime = dmy_hms(paste(Date, Time))) %>%
+# Convert Date/Time columns to datetime column, and extract date for 2007-02-01 and 2007-02-02.
+df <- df %>%
+  # Add datetime column based on Date/Time columns.
+  mutate(datetime = dmy_hms(paste(Date, Time))) %>%
+  # Remove Date and Time columns.
   select(-Date, -Time) %>%
-  # Filter data from the dates 2007-02-01 and 2007-02-02.
+  # Extract data for 2007-02-01 and 2007-02-02.
   filter(datetime >= ymd("2007-02-01") & datetime < ymd("2007-02-03"))
 
 # Plot of weekday versus global active power.
